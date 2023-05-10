@@ -30,10 +30,11 @@ add_action('plugins_loaded', function () {
 	require_once plugin_dir_path( __FILE__ ).'gr-admin.php';
 
 	$con = new GetReview\Connect();
-	new GetReview\Admin();
+	$adm = new GetReview\Admin();
 
 	echo 'test';
-	var_dump($con);
+	//var_dump($con);
+	var_dump($adm);
 
 
 });
