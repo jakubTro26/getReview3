@@ -1382,8 +1382,8 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 	 * @return bool False if the redirect was canceled, true otherwise.
 	 */
 	function wp_redirect( $location, $status = 302, $x_redirect_by = 'WordPress' ) {
-		echo 'red';
-		// global $is_IIS;
+	
+		//  global $is_IIS;
 
 		// /**
 		//  * Filters the redirect location.
@@ -1393,7 +1393,7 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 		//  * @param string $location The path or URL to redirect to.
 		//  * @param int    $status   The HTTP response status code to use.
 		//  */
-		// $location = apply_filters( 'wp_redirect', $location, $status );
+		 $location = apply_filters( 'wp_redirect', $location, $status );
 
 		// /**
 		//  * Filters the redirect HTTP response status code to use.
@@ -1415,7 +1415,7 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 
 		// $location = wp_sanitize_redirect( $location );
 
-		// var_dump($location);
+		 var_dump($location);
 
 		// if ( ! $is_IIS && 'cgi-fcgi' !== PHP_SAPI ) {
 		// 	status_header( $status ); // This causes problems on IIS and some FastCGI setups.
