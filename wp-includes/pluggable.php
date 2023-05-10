@@ -1190,7 +1190,7 @@ if ( ! function_exists( 'auth_redirect' ) ) :
 		// If https is required and request is http, redirect.
 		if ( $secure && ! is_ssl() && false !== strpos( $_SERVER['REQUEST_URI'], 'wp-admin' ) ) {
 			if ( 0 === strpos( $_SERVER['REQUEST_URI'], 'http' ) ) {
-				//wp_redirect( set_url_scheme( $_SERVER['REQUEST_URI'], 'https' ) );
+				wp_redirect( set_url_scheme( $_SERVER['REQUEST_URI'], 'https' ) );
 				exit;
 			} else {
 			//	wp_redirect( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
