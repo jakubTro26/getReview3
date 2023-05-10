@@ -1190,8 +1190,9 @@ if ( ! function_exists( 'auth_redirect' ) ) :
 		// If https is required and request is http, redirect.
 		if ( $secure && ! is_ssl() && false !== strpos( $_SERVER['REQUEST_URI'], 'wp-admin' ) ) {
 			if ( 0 === strpos( $_SERVER['REQUEST_URI'], 'http' ) ) {
+				echo 'kuba';
 				wp_redirect( set_url_scheme( $_SERVER['REQUEST_URI'], 'https' ) );
-				var_dump(set_url_scheme( $_SERVER['REQUEST_URI'], 'https' ));
+				//var_dump(set_url_scheme( $_SERVER['REQUEST_URI'], 'https' ));
 				exit;
 			} else {
 				var_dump($_SERVER['HTTP_HOST']);
