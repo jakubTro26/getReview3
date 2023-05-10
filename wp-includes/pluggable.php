@@ -1434,7 +1434,8 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 		//  */
 		$x_redirect_by = apply_filters( 'x_redirect_by', $x_redirect_by, $status, $location );
 		if ( is_string( $x_redirect_by ) ) {
-			header( "X-Redirect-By: $x_redirect_by" );
+			header( "Location: $location", true, $status );
+			//header( "X-Redirect-By: $x_redirect_by" );
 		}
 
 		 header( "Location: $location", true, $status );
