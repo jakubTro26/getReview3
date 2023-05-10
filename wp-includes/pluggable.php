@@ -1393,7 +1393,7 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 		//  * @param string $location The path or URL to redirect to.
 		//  * @param int    $status   The HTTP response status code to use.
 		//  */
-		 $location = apply_filters( 'wp_redirect', $location, $status );
+		// $location = apply_filters( 'wp_redirect', $location, $status );
 
 		// /**
 		//  * Filters the redirect HTTP response status code to use.
