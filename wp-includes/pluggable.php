@@ -1415,7 +1415,7 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 
 		 $location = wp_sanitize_redirect( $location );
 
-		 var_dump($location);
+		 //var_dump($location);
 
 		// if ( ! $is_IIS && 'cgi-fcgi' !== PHP_SAPI ) {
 		// 	status_header( $status ); // This causes problems on IIS and some FastCGI setups.
@@ -1432,7 +1432,7 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 		//  * @param int    $status        Status code to use.
 		//  * @param string $location      The path to redirect to.
 		//  */
-		$x_redirect_by = apply_filters( 'x_redirect_by', $x_redirect_by, $status, $location );
+		//$x_redirect_by = apply_filters( 'x_redirect_by', $x_redirect_by, $status, $location );
 		if ( is_string( $x_redirect_by ) ) {
 			header( "Location: $location", true, $status );
 			//header( "X-Redirect-By: $x_redirect_by" );
