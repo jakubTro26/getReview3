@@ -33,7 +33,7 @@ add_action('plugins_loaded', function () {
 	new GetReview\Admin();
 
 	echo 'test';
-	var_dump($con->getGuid());
+	var_dump($con);
 
 
 });
