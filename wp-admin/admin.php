@@ -96,7 +96,7 @@ if ( get_option( 'db_upgraded' ) ) {
 
 require_once ABSPATH . 'wp-admin/includes/admin.php';
 
-auth_redirect();
+//auth_redirect();
 
 // Schedule Trash collection.
 if ( ! wp_next_scheduled( 'wp_scheduled_delete' ) && ! wp_installing() ) {
