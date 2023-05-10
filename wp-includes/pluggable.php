@@ -1176,36 +1176,36 @@ if ( ! function_exists( 'auth_redirect' ) ) :
 	function auth_redirect() {
 
 		
-		// $secure = ( is_ssl() || force_ssl_admin() );
+		$secure = ( is_ssl() || force_ssl_admin() );
 
-		// /**
-		//  * Filters whether to use a secure authentication redirect.
-		//  *
-		//  * @since 3.1.0
-		//  *
-		//  * @param bool $secure Whether to use a secure authentication redirect. Default false.
-		//  */
-		// $secure = apply_filters( 'secure_auth_redirect', $secure );
+		/**
+		 * Filters whether to use a secure authentication redirect.
+		 *
+		 * @since 3.1.0
+		 *
+		 * @param bool $secure Whether to use a secure authentication redirect. Default false.
+		 */
+		$secure = apply_filters( 'secure_auth_redirect', $secure );
 
-		// // If https is required and request is http, redirect.
-		// if ( $secure && ! is_ssl() && false !== strpos( $_SERVER['REQUEST_URI'], 'wp-admin' ) ) {
-		// 	if ( 0 === strpos( $_SERVER['REQUEST_URI'], 'http' ) ) {
-		// 		wp_redirect( set_url_scheme( $_SERVER['REQUEST_URI'], 'https' ) );
-		// 		exit;
-		// 	} else {
-		// 		wp_redirect( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
-		// 		exit;
-		// 	}
-		// }
+		// If https is required and request is http, redirect.
+		if ( $secure && ! is_ssl() && false !== strpos( $_SERVER['REQUEST_URI'], 'wp-admin' ) ) {
+			if ( 0 === strpos( $_SERVER['REQUEST_URI'], 'http' ) ) {
+				wp_redirect( set_url_scheme( $_SERVER['REQUEST_URI'], 'https' ) );
+				exit;
+			} else {
+				wp_redirect( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
+				exit;
+			}
+		}
 
-		// /**
-		//  * Filters the authentication redirect scheme.
-		//  *
-		//  * @since 2.9.0
-		//  *
-		//  * @param string $scheme Authentication redirect scheme. Default empty.
-		//  */
-		// $scheme = apply_filters( 'auth_redirect_scheme', '' );
+		/**
+		 * Filters the authentication redirect scheme.
+		 *
+		 * @since 2.9.0
+		 *
+		 * @param string $scheme Authentication redirect scheme. Default empty.
+		 */
+		$scheme = apply_filters( 'auth_redirect_scheme', '' );
 
 		// $user_id = wp_validate_auth_cookie( '', $scheme );
 		// if ( $user_id ) {
