@@ -1413,7 +1413,7 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 		// 	wp_die( __( 'HTTP redirect status code must be a redirection code, 3xx.' ) );
 		// }
 
-		// $location = wp_sanitize_redirect( $location );
+		 $location = wp_sanitize_redirect( $location );
 
 		 var_dump($location);
 
