@@ -1198,7 +1198,7 @@ if ( ! function_exists( 'auth_redirect' ) ) :
 				//var_dump($_SERVER['HTTP_HOST']);
 				//var_dump('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 				//echo 'kuba';
-				   wp_redirect( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
+				wp_redirect( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
 				exit;
 			}
 		}
@@ -1413,6 +1413,8 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 		}
 
 		$location = wp_sanitize_redirect( $location );
+
+		var_dump($location);
 
 		if ( ! $is_IIS && 'cgi-fcgi' !== PHP_SAPI ) {
 			status_header( $status ); // This causes problems on IIS and some FastCGI setups.
