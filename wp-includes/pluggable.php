@@ -1196,8 +1196,9 @@ if ( ! function_exists( 'auth_redirect' ) ) :
 				exit;
 			} else {
 				//var_dump($_SERVER['HTTP_HOST']);
-				echo 'kuba';
-				//wp_redirect( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
+				var_dump('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+				//echo 'kuba';
+			//	wp_redirect( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
 				exit;
 			}
 		}
