@@ -1174,6 +1174,8 @@ if ( ! function_exists( 'auth_redirect' ) ) :
 	 * @since 1.5.0
 	 */
 	function auth_redirect() {
+
+		
 		$secure = ( is_ssl() || force_ssl_admin() );
 
 		/**
