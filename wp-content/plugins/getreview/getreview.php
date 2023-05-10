@@ -32,9 +32,9 @@ add_action('plugins_loaded', function () {
 	$con = new GetReview\Connect();
 	$adm = new GetReview\Admin();
 
-	echo 'test';
+	//echo 'test';
 	//var_dump($con);
-	var_dump($adm);
+	//var_dump($adm);
 
 
 });
