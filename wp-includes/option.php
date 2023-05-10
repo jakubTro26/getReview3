@@ -79,7 +79,7 @@ function get_option( $option, $default_value = false ) {
 	global $wpdb;
 
 
-	echo 'getting123';
+	//echo 'getting123';
 	if ( is_scalar( $option ) ) {
 		$option = trim( $option );
 	}
