@@ -1437,7 +1437,7 @@ if ( ! function_exists( 'wp_redirect' ) ) :
 		// 	header( "X-Redirect-By: $x_redirect_by" );
 		// }
 
-		// header( "Location: $location", true, $status );
+		 header( "Location: $location", true, $status );
 
 		// return true;
 	}
