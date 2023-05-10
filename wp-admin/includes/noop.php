@@ -35,7 +35,9 @@ function apply_filters() {}
 /**
  * @ignore
  */
-function get_option() {}
+function get_option() {
+	echo 'getting123456789';
+}
 
 /**
  * @ignore
